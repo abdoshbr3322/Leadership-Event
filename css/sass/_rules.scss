@@ -1,0 +1,29 @@
+@use "./helpers/globals" as *;
+@use "./helpers/mixins" as *;
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+ul ,ol {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+input,
+select,
+option,
+textarea,
+button {
+  border: none;
+  outline: none;
+}

@@ -1,0 +1,138 @@
+header .logo, header ul.nav li a:hover {
+  color: #0dcaf0;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+select,
+option,
+textarea,
+button {
+  border: none;
+  outline: none;
+}
+
+header {
+  background-color: #273053;
+}
+header .nav-toggle {
+  height: 30px;
+  width: 40px;
+}
+header .nav-toggle span,
+header .nav-toggle span::before,
+header .nav-toggle span::after {
+  height: 2px;
+  width: 100%;
+  background: #fff;
+}
+header .nav-toggle span {
+  position: relative;
+  transition: height 0s 0.3s;
+}
+header .nav-toggle span::before, header .nav-toggle span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+header .nav-toggle span::before {
+  top: -10px;
+}
+header .nav-toggle span::after {
+  top: 12px;
+}
+header .nav-toggle.nav-active span {
+  height: 0;
+}
+header .nav-toggle.nav-active span::before {
+  animation: nav-toggle-top 0.6s;
+  animation-fill-mode: forwards;
+}
+header .nav-toggle.nav-active span::after {
+  animation: nav-toggle-bottom 0.6s;
+  animation-fill-mode: forwards;
+}
+header .logo i {
+  font-size: 38px;
+  margin-right: 5px;
+}
+header .logo h4 {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+}
+header ul.nav li a {
+  font-weight: 500;
+  color: #fff;
+  transition: 0.3s;
+}
+header .buy a {
+  font-weight: bold;
+  color: #fff;
+  transition: 0.3s;
+  border-radius: 100px;
+  background-color: #0d6efd;
+}
+header .buy a:hover {
+  background-color: #0dcaf0;
+}
+
+@-webkit-keyframes nav-toggle-top {
+  50% {
+    top: 0;
+  }
+  100% {
+    transform: rotate(45deg);
+    top: 0;
+  }
+}
+@keyframes nav-toggle-top {
+  50% {
+    top: 0;
+  }
+  100% {
+    transform: rotate(45deg);
+    top: 0;
+  }
+}
+@-webkit-keyframes nav-toggle-bottom {
+  50% {
+    top: 0;
+  }
+  100% {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+}
+@keyframes nav-toggle-bottom {
+  50% {
+    top: 0;
+  }
+  100% {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

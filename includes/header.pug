@@ -1,0 +1,15 @@
+header.py-2
+  .container: .content.d-flex.align-items-center.justify-content-sm-between.justify-content-lg-start
+    .nav-toggle.d-flex.align-items-center.d-lg-none
+      span.d-block
+    .logo.d-flex.align-items-center.me-lg-auto
+      i.bi-bullseye.brand-logo
+      h4 Leadership #[br] Event
+    ul.nav.desktop-nav.row.gx-4.d-none.d-lg-flex.me-5
+      - let links = {Home: "#home" ,About: "#about" ,Shedules: "#shedules" ,Pricing: "#pricing" ,Contact: "#contact"}
+      - for (let link in links)
+        li.col: a.d-block.p-2(href=links[link]) #{link}
+    .buy
+      a(
+        href="https://storage.googleapis.com/drive-bulk-export-anonymous/20220801T191316Z/4133399871716478688/b132c8c5-9539-40b5-9925-899ccbccd7ee/1/7603df2c-f66b-45fb-bbe1-619df0e3fa21?authuser"
+      ).d-block.py-2.px-3 Buy Ticket

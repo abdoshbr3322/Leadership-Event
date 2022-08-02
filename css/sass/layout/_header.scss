@@ -1,0 +1,89 @@
+@use "../helpers/globals" as *;
+@use "../helpers/mixins" as *;
+@use "../helpers/placeholders" as *;
+
+header {
+  background-color: #273053;
+  .nav-toggle {
+    height: 30px;
+    width: 40px;
+    span,
+    span::before,
+    span::after {
+      height: 2px;
+      width: 100%;
+      background: #fff;
+    }
+    span {
+      position: relative;
+      transition: height 0s 0.3s;
+      &::before,
+      &::after {
+        content: "";
+        @include position-style(absolute, null, 0);
+      }
+      &::before {
+        top: -10px;
+      }
+      &::after {
+        top: 12px;
+      }
+    }
+    &.nav-active {
+      span {
+        height: 0;
+        &::before {
+          animation: nav-toggle-top $main-transition * 2;
+          animation-fill-mode: forwards;
+        }
+        &::after {
+          animation: nav-toggle-bottom $main-transition * 2;
+          animation-fill-mode: forwards;
+        }
+      }
+
+    }
+  }
+  .logo {
+    @extend %main-color;
+    i {
+      font-size: 38px;
+      margin-right: 5px;
+    }
+    h4 {
+      @include text-style(20px, bold, null, 1);
+    }
+  }
+  ul.nav {
+    li a {
+      @include text-style(null, 500, #fff);
+      transition: $main-transition;
+      &:hover {
+        @extend %main-color;
+      }
+    }
+  }
+  .buy {
+    a {
+      @include text-style(null, bold, #fff);
+      transition: $main-transition;
+      border-radius: 100px;
+      background-color: #0d6efd;
+      &:hover {
+        background-color: $main-color;
+      }
+    }
+  }
+}
+
+@each $rotate_val, $dir in ((45deg, top), (-45deg, bottom)) {
+  @include animation(nav-toggle-#{$dir}) {
+    50% {
+      top: 0;
+    }
+    100% {
+      transform: rotate($rotate_val);
+      top: 0;
+    }
+  }
+}
