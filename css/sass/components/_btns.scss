@@ -1,0 +1,15 @@
+@use "../helpers/globals" as *;
+@use "../helpers/mixins" as *;
+@use "../helpers/placeholders" as *;
+
+.main-btn {
+  @include text-style(null ,bold ,#ffffff);
+  background-color: #273053;
+  padding: 10px 20px;
+  border-radius: 100px;
+  transition: 0.2s;
+  &:hover {
+    background-color: $main-color;
+    box-shadow: 0 16px 48px 0 rgba(0, 0, 0, 0.176);
+  }
+}

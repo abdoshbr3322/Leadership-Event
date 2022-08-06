@@ -3,20 +3,26 @@
 @use "../helpers/placeholders" as *;
 
 header {
+  @include position-style(fixed, 0, 0);
   background-color: #273053;
+  z-index: 9999;
   .nav-toggle {
     height: 30px;
     width: 40px;
+    @include breakpoint("small-mobile") {
+      width: 30px;
+    }
+    cursor: pointer;
     span,
     span::before,
     span::after {
       height: 2px;
       width: 100%;
       background: #fff;
+      transition: $main-transition;
     }
     span {
       position: relative;
-      transition: height 0s 0.3s;
       &::before,
       &::after {
         content: "";
@@ -33,28 +39,38 @@ header {
       span {
         height: 0;
         &::before {
-          animation: nav-toggle-top $main-transition * 2;
-          animation-fill-mode: forwards;
+          transform: rotate(45deg);
+          top: 0;
         }
         &::after {
-          animation: nav-toggle-bottom $main-transition * 2;
-          animation-fill-mode: forwards;
+          transform: rotate(-45deg);
+          top: 0;
         }
       }
-
     }
   }
-  .logo {
+  .logo a {
     @extend %main-color;
     i {
       font-size: 38px;
+      @include breakpoint("small-mobile") {
+        font-size: 25px;
+      }
       margin-right: 5px;
     }
     h4 {
       @include text-style(20px, bold, null, 1);
+      @include breakpoint("small-mobile") {
+        font-size: 16px;
+      }
     }
   }
   ul.nav {
+    &.mobile-nav {
+      display: none;
+      max-height: 100vh;
+      overflow: auto;
+    }
     li a {
       @include text-style(null, 500, #fff);
       transition: $main-transition;
@@ -64,6 +80,10 @@ header {
     }
   }
   .buy {
+    @include breakpoint("small-mobile") {
+      font-size: 14px;
+      
+    }
     a {
       @include text-style(null, bold, #fff);
       transition: $main-transition;
@@ -72,18 +92,6 @@ header {
       &:hover {
         background-color: $main-color;
       }
-    }
-  }
-}
-
-@each $rotate_val, $dir in ((45deg, top), (-45deg, bottom)) {
-  @include animation(nav-toggle-#{$dir}) {
-    50% {
-      top: 0;
-    }
-    100% {
-      transform: rotate($rotate_val);
-      top: 0;
     }
   }
 }

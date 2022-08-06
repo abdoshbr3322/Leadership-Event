@@ -1,3 +1,177 @@
 @use "../helpers/globals" as *;
 @use "../helpers/mixins" as *;
 @use "../helpers/placeholders" as *;
+
+.banner {
+  padding-top: 140px;
+  padding-bottom: 20px;
+  background-image: linear-gradient(to top, #273053 30%, transparent);
+  position: relative;
+  
+  .video-wrapper {
+    @include position-style(absolute, 0, 0);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    video {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .heading {
+    @include text-style(62px, bold, #fff, 1.1);
+    @include breakpoint("small-mobile") {
+      font-size: 45px;
+    }
+    letter-spacing: -2px;
+    span {
+      color: $main-color;
+      text-decoration: underline;
+    }
+  }
+  .date-location {
+    & > * {
+      border: 1px solid #fff;
+      &:first-child {
+        border-right: none;
+      }
+    }
+  }
+  .go-down {
+    @include circle(45px);
+    @include text-style(24px, null, #000);
+  }
+  .highlights {
+    width: 100%;
+    .highlight {
+      position: relative;
+      overflow: hidden;
+      &:hover {
+        img {
+          transition: $secondary-transition;
+          transform: scale(1.15);
+        }
+        .title {
+          display: none;
+        }
+        .youtube {
+          display: block;
+        }
+      }
+      .h-overlay {
+        @include overlay(0.5, #000);
+        z-index: 1;
+      }
+      img {
+        transition: $slow-transition;
+      }
+      .title,
+      .youtube {
+        position: absolute;
+        @extend %el-centered-b;
+        z-index: 2;
+      }
+      .title {
+        @include text-style(36px, bold, #ffffff);
+      }
+      .youtube {
+        display: none;
+        font-size: 70px;
+        color: red;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+}
+.about {
+  padding: 110px 0;
+  h4.title {
+    @include text-style(32px, 600, #000);
+  }
+  .story {
+    p.info {
+      @include text-style(18px, null, #717275);
+    }
+    .btns .btn-1 {
+      @extend %main-color;
+      background-color: #fff;
+      border: 2px solid $main-color;
+      &:hover {
+        background-color: $main-color;
+        color: #fff;
+      }
+    }
+  }
+  .monials {
+    .peaple {
+      img {
+        @include circle(45px);
+        object-fit: cover;
+        border: 2px solid white;
+        &:not(:first-child) {
+          margin-left: -5px;
+        }
+      }
+    }
+    .discription {
+      color: #717275;
+    }
+  }
+}
+.shedules {
+  .days {
+    .col:not(:first-child) .day {
+      border-left-color: rgba(13, 202, 240, 0.12);
+    }
+    .col .day {
+      transition: $main-transition;
+      border: 3px solid transparent;
+      @include prefixer(user-select ,none ,(webkit ,moz));
+      cursor: pointer;
+      .title {
+        @include text-style(36px, bold, #000);
+        letter-spacing: -1px;
+        transition: $main-transition;
+        text-transform: capitalize;
+      }
+      .date {
+        @include text-style(18px, null, #717275);
+      }
+      &:hover ,&.active {
+        z-index: 2;
+        border-left: 3px solid $main-color;
+        box-shadow: 0px 16px 48px 0 rgba(0, 0, 0, 0.171);
+        isolation: isolate;
+
+        .title {
+          @extend %main-color;
+        }
+      }
+    }
+  }
+  .events {
+    .event {
+        .image img {
+          border-radius: 20px;
+        }
+        .content {
+          .title {
+            @include text-style(32px ,bold ,#000)
+          }
+          .discription {
+            @include text-style(18px ,null ,#717275);
+          }
+          .info {
+            img {
+              @include circle(45px);
+              object-fit: cover;
+            }
+          }
+        }
+
+    }
+  }
+}

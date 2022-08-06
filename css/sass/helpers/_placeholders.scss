@@ -1,4 +1,4 @@
-@use "../helpers/globals" as *;
+@use "./globals" as *;
 @use "./mixins" as *;
 
 // this placeholder to center the element
@@ -21,10 +21,4 @@ $center-dirs: (
 }
 %main-padding {
   padding: 120px 0;
-}
-%overlay {
-  @include position-style(absolute, 0, 0);
-  width: 100%;
-  height: 100%;
-  opacity: 0;
 }

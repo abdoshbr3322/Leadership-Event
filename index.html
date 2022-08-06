@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="file:///D:/Projects/.vscode/Front-End-Projects/Leadership/">
     <title>Leadership Event</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css" integrity="sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,24 +13,163 @@
     <link rel="stylesheet" href="./css/sass/styles.css">
   </head>
   <body>
-    <header class="py-2">
+    <header class="w-100 py-2">
       <div class="container">
-        <div class="content d-flex align-items-center justify-content-sm-between justify-content-lg-start">
+        <div class="content row row-cols-auto g-0 align-items-center justify-content-between justify-content-lg-start">
           <div class="nav-toggle d-flex align-items-center d-lg-none"><span class="d-block"></span></div>
-          <div class="logo d-flex align-items-center me-lg-auto"><i class="bi-bullseye brand-logo"></i>
-            <h4>Leadership <br> Event</h4>
-          </div>
+          <div class="logo me-lg-auto"><a class="d-flex align-items-center" href="#"><i class="bi-bullseye brand-logo"></i>
+              <h4>Leadership <br> Event</h4></a></div>
           <ul class="nav desktop-nav row gx-4 d-none d-lg-flex me-5">
-            <li class="col"><a class="d-block p-2" href="#home">Home</a></li>
+            <li class="col"><a class="d-block p-2" href="#">Home</a></li>
             <li class="col"><a class="d-block p-2" href="#about">About</a></li>
             <li class="col"><a class="d-block p-2" href="#shedules">Shedules</a></li>
             <li class="col"><a class="d-block p-2" href="#pricing">Pricing</a></li>
             <li class="col"><a class="d-block p-2" href="#contact">Contact</a></li>
           </ul>
           <div class="buy"><a class="d-block py-2 px-3" href="https://storage.googleapis.com/drive-bulk-export-anonymous/20220801T191316Z/4133399871716478688/b132c8c5-9539-40b5-9925-899ccbccd7ee/1/7603df2c-f66b-45fb-bbe1-619df0e3fa21?authuser">Buy Ticket</a></div>
+          <ul class="col-12 nav mobile-nav row row-cols-1 d-lg-none">
+            <li class="col"><a class="d-block py-3" href="#">Home</a></li>
+            <li class="col"><a class="d-block py-3" href="#about">About</a></li>
+            <li class="col"><a class="d-block py-3" href="#shedules">Shedules</a></li>
+            <li class="col"><a class="d-block py-3" href="#pricing">Pricing</a></li>
+            <li class="col"><a class="d-block py-3" href="#contact">Contact</a></li>
+          </ul>
         </div>
       </div>
     </header>
+    <div class="banner">
+      <div class="container">
+        <div class="content d-flex flex-column align-items-center text-center">
+          <div class="video-wrapper">
+            <video autoplay loop muted>
+              <source src="videos/landing.mp4" type="video/mp4">
+              <p>Please Use Modern Browser</p>
+            </video>
+          </div>
+          <h1 class="heading mb-4"><span>LEADERSHIP</span> <br> CONFERENCE 2022</h1>
+          <div class="date-location d-flex text-white mb-5">
+            <div class="date py-2 px-4">July 12  to 18, 2022</div>
+            <div class="location py-2 px-4">Times Square, NY</div>
+          </div><a class="go-down d-flex justify-content-center align-items-center mb-5 bg-white" href="#about"><i class="bi bi-arrow-down"></i></a>
+          <div class="highlights row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4">
+            <div class="col">
+              <div class="highlight">
+                <div class="h-overlay"></div><img src="./imgs/highlight/alexandre-pellaes-6vAjp0pscX0-unsplash.jpg">
+                <h4 class="title">2020 Highlights</h4><a class="youtube" href="https://www.youtube.com"><i class="bi bi-youtube"></i></a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="highlight">
+                <div class="h-overlay"></div><img src="./imgs/highlight/jakob-dalbjorn-cuKJre3nyYc-unsplash.jpg">
+                <h4 class="title">2021 Highlights</h4><a class="youtube" href="https://www.youtube.com"><i class="bi bi-youtube"></i></a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="highlight">
+                <div class="h-overlay"></div><img src="./imgs/highlight/miguel-henriques--8atMWER8bI-unsplash.jpg">
+                <h4 class="title">2022 Highlights</h4><a class="youtube" href="https://www.youtube.com"><i class="bi bi-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about" id="about">
+      <div class="container">
+        <div class="content row gy-5 gy-lg-0">
+          <div class="col col-12 mb-3">
+            <h3 class="main-heading">Our <span>Story</span></h3>
+          </div>
+          <div class="col col-12 col-lg-6">
+            <div class="story">
+              <h4 class="title mb-3">The importance of Leadership Conference in 2022</h4>
+              <p class="info mb-4">Leadership Event is one-page Bootstrap v5.1.3 CSS layout for your website. Thank you for choosing TemplateMo website where you can instantly download free CSS templates at no cost.</p>
+              <div class="btns d-flex"> 
+                <button class="btn-1 main-btn me-3">Meet Speakers</button>
+                <button class="btn-2 main-btn">Check Out Shedules</button>
+              </div>
+            </div>
+          </div>
+          <div class="col col-12 col-lg-6">
+            <div class="monials">
+              <h4 class="title pb-5 border-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore</h4>
+              <div class="peaple py-3 d-flex align-items-center">
+                <div class="imgs d-inline-flex me-4"><img src="./imgs/avatar/happy-asian-man-standing-with-arms-crossed-grey-wall.jpg"><img src="./imgs/avatar/indoor-shot-beautiful-happy-african-american-woman-smiling-cheerfully-keeping-her-arms-folded-relaxing-indoors-after-morning-lectures-university.jpg"><img src="./imgs/avatar/portrait-good-looking-brunette-young-asian-woman.jpg"><img src="./imgs/avatar/senior-man-white-sweater-eyeglasses.jpg"></div>
+                <div class="discription"> 120+ People are attending with us</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="shedules" id="shedules">
+      <div class="container">
+        <h4 class="main-heading text-center mb-5 mb-1">Next <span>Shedules</span></h4>
+        <div class="days row g-0 mb-4">
+          <div class="col col-6 col-lg-3">
+            <div class="day py-4 ps-4 active" data-day=".#{day.day}">
+              <h5 class="title mb-0">Day one</h5>
+              <div class="date">July 12, 2022</div>
+            </div>
+          </div>
+          <div class="col col-6 col-lg-3">
+            <div class="day py-4 ps-4" data-day=".#{day.day}">
+              <h5 class="title mb-0">Day two</h5>
+              <div class="date">July 14, 2022</div>
+            </div>
+          </div>
+          <div class="col col-6 col-lg-3">
+            <div class="day py-4 ps-4" data-day=".#{day.day}">
+              <h5 class="title mb-0">Day three</h5>
+              <div class="date">July 16, 2022</div>
+            </div>
+          </div>
+          <div class="col col-6 col-lg-3">
+            <div class="day py-4 ps-4" data-day=".#{day.day}">
+              <h5 class="title mb-0">Day four</h5>
+              <div class="date">July 18, 2022</div>
+            </div>
+          </div>
+        </div>
+        <div class="events">
+          <div class="event py-4 border-bottom one">
+            <div class="row align-items-start">
+              <div class="col col-12 col-lg-4">
+                <div class="image"><img src="./imgs/schedule/business-woman-making-presentation-office.jpg"></div>
+              </div>
+              <div class="col">
+                <div class="content">
+                  <h3 class="title">Startup Development Ideas</h3>
+                  <p class="discription">
+                    You are free to download any HTML CSS template from TemplateMo website.
+                    You can use any template for business purposes.
+                    You are not allowed to redistribute the downloadable ZIP file on any other template website. Thank you
+                  </p>
+                  <div class="info row row-cols-auto justify-content-between align-items-center flex-wrap flex-md-nowrap gx-3">
+                    <div class="col"> 
+                      <div class="speaker d-flex align-items-start">
+                        
+                        <img src="./imgs/avatar/happy-asian-man-standing-with-arms-crossed-grey-wall.jpg">
+                        <div class="name-jop">
+                          <div class="name">Logan Wilson</div>
+                          <div class="jop">CEO / FOUNDER</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col"> 
+                      <div class="time"><i class="bi bi-clock"></i> 9:00 - 9:45 AM</div>
+                    </div>
+                    <div class="col"> 
+                      <div class="conference"><i class="bi-layout-sidebar"></i> Conference Hall 3</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/js/bootstrap.min.js" integrity="sha512-8Y8eGK92dzouwpROIppwr+0kPauu0qqtnzZZNEF8Pat5tuRNJxJXCkbQfJ0HlUG3y1HB3z18CSKmUo7i2zcPpg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/main.js"></script>

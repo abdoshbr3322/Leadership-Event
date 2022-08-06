@@ -1,5 +1,6 @@
 @use "./helpers/globals" as *;
 @use "./helpers/mixins" as *;
+@use "./helpers/placeholders" as *;
 * {
   margin: 0;
   box-sizing: border-box;
@@ -9,10 +10,12 @@ body {
   font-family: "DM Sans", sans-serif;
 }
 
-img {
+img,
+video {
   max-width: 100%;
 }
-ul ,ol {
+ul,
+ol {
   list-style: none;
   padding: 0;
 }
@@ -26,4 +29,8 @@ textarea,
 button {
   border: none;
   outline: none;
+}
+::selection {
+  background-color: $main-color;
+  color: white;
 }
