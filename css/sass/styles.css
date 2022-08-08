@@ -394,4 +394,28 @@ header .buy a:hover {
   color: #fff;
 }
 
+.pricing {
+  padding: 120px 0;
+}
+.pricing .plan {
+  box-shadow: 1px 16px 40px rgba(0, 0, 0, 0.188);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.pricing .plan .head {
+  background-color: #273053;
+}
+.pricing .plan .head .title, .pricing .plan .head .price {
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+}
+.pricing .plan .head .price {
+  font-size: 24px;
+}
+.pricing .plan .body, .pricing .plan .foot p {
+  font-size: 18px;
+  color: #717275;
+}
+
 /*# sourceMappingURL=styles.css.map */

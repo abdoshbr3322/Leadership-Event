@@ -1,5 +1,8 @@
 extends ./layout/layout
 
+block append head
+  script(src="https://polyfill.io/v3/polyfill.min.js?features=default")
+  script(src="./js/map.js")
 block title
   title Leadership Event
 block pageContent
@@ -66,7 +69,6 @@ block pageContent
                 img(src="./imgs/avatar/senior-man-white-sweater-eyeglasses.jpg")  
               | 120+ People are attending with us
   .shedules#shedules
-
     .container
       h4.main-heading.text-center.mb-5.mb-1 Next #[span Shedules]
       .days.row.g-0.mb-4
@@ -183,7 +185,7 @@ block pageContent
                 .content
                   h3.title #{event.title}
                   p.discription.mb-3 #{event.discription}
-                  .info.row.row-cols-auto.justify-content-center.justify-content-md-between.align-items-center.flex-wrap.flex-md-nowrap.gx-4.gx-md-3.gy-3.gy-md-0
+                  .info.row.row-cols-auto.justify-content-md-between.align-items-center.flex-wrap.flex-md-nowrap.gx-4.gx-md-3.gy-3.gy-md-0
                     .col 
                       .speaker.d-flex.align-items-start
                         |
@@ -208,4 +210,58 @@ block pageContent
           a.rigister-btn.main-btn(href="#") Rigister Today
   .pricing#pricing
     .container
-      .content.row.row-cols-1.row-cols-md-2.row-cols-lg-3
+      h4.main-heading.text-center.mb-5 Get Your #[span Tickets]
+      .content.row.row-cols-1.row-cols-md-2.row-cols-lg-3.gy-5
+        .col
+          .plan.pb-3
+            .head.d-flex.justify-content-between.align-items-center.px-4.py-4
+              h5.title.m-0 Early bird
+              h6.price.m-0 $640
+            .body.px-4.pt-4.mb-2
+              .feat.mb-3 #[i.bi.bi-cup.me-3]
+                | All-Day Coffee + Snacks
+              .feat.mb-3 #[i.bi.bi-controller.me-3]
+                | After Party
+              .feat #[i.bi.bi-chat-square.me-3]
+                | 24/7 Support
+              .border-bottom.pt-4
+            .foot.pt-2.px-4.py-3
+              p.mb-4 Quick group meetings for multiple teams
+              button.buy.main-btn Buy Tickets
+        .col
+          .plan.pb-3
+            .head.d-flex.justify-content-between.align-items-center.px-4.py-4
+              h5.title.m-0 Gold
+              h6.price.m-0 $840
+            .body.px-4.pt-4.mb-2
+              .feat.mb-3 #[i.bi.bi-cup.me-3]
+                | All-Day Coffee + Snacks
+              .feat.mb-3 #[i.bi.bi-boombox.me-3]
+                | Group Meetings + After Party
+              .feat #[i.bi.bi-chat-square.me-3]
+                | 24/7 Support + Instant Chats
+              .border-bottom.pt-4
+            .foot.pt-2.px-4.py-3
+              p.mb-4 Quick group meetings for multiple teams
+              button.buy.main-btn Buy Tickets
+        .col
+          .plan.pb-3
+            .head.d-flex.justify-content-between.align-items-center.px-4.py-4
+              h5.title.m-0 Platinum
+              h6.price.m-0 $1,240
+            .body.px-4.pt-4.mb-2
+              .feat.mb-3 #[i.bi.bi-cash.me-3]
+                | Cashback $200
+              .feat.mb-3 #[i.bi.bi-boombox.me-3]
+                | Private Meetings + After Party
+              .feat #[i.bi.bi-chat-square.me-3]
+                | 24/7 Support + Instant Chats
+              .border-bottom.pt-4
+            .foot.pt-2.px-4.py-3
+              p.mb-4 group talks and private chats for multiple teams
+              button.buy.main-btn Buy Tickets
+  .venue
+    .container
+      .content.row.cols-1.col-lg-2
+        .map#map
+
