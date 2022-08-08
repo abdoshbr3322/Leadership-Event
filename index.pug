@@ -58,51 +58,154 @@ block pageContent
             h4.title.pb-5.border-bottom
               | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore
 
-            .peaple.py-3.d-flex.align-items-center
+            .peaple.py-3.d-flex.align-items-center.justify-content-center.flex-wrap
               .imgs.d-inline-flex.me-4
                 img(src="./imgs/avatar/happy-asian-man-standing-with-arms-crossed-grey-wall.jpg")
                 img(src="./imgs/avatar/indoor-shot-beautiful-happy-african-american-woman-smiling-cheerfully-keeping-her-arms-folded-relaxing-indoors-after-morning-lectures-university.jpg")
                 img(src="./imgs/avatar/portrait-good-looking-brunette-young-asian-woman.jpg")
                 img(src="./imgs/avatar/senior-man-white-sweater-eyeglasses.jpg")  
-              .discription  120+ People are attending with us
+              | 120+ People are attending with us
   .shedules#shedules
+
     .container
       h4.main-heading.text-center.mb-5.mb-1 Next #[span Shedules]
       .days.row.g-0.mb-4
         - let days = [ {day: "one", date: "12"}, {day: "two", date: "14"}, {day: "three", date: "16"}, {day: "four", date: "18"}]
         each day in days
-          .col.col-6.col-lg-3
+          .col.col-12.col-sm-6.col-lg-3
             - let active = day.day === 'one' ? "active" : null
-            .day.py-4.ps-4(data-day=".#{day.day}")&attributes({
-              "data-day": ".#{day.day}",
+            .day.py-4.ps-4&attributes({
+              "data-day": "." + day.day,
               class: active
             })
               h5.title.mb-0 Day #{day.day}
               .date July #{day.date}, 2022
 
       .events
-        .event.py-4.border-bottom.one
-          .row.align-items-start
-            .col.col-12.col-lg-4
-              .image: img(src="./imgs/schedule/business-woman-making-presentation-office.jpg")
-            .col
-              .content
-                h3.title Startup Development Ideas
-                p.discription
-                  | You are free to download any HTML CSS template from TemplateMo website.
-                  | You can use any template for business purposes.
-                  | You are not allowed to redistribute the downloadable ZIP file on any other template website. Thank you
-                .info.row.row-cols-auto.justify-content-between.align-items-center.flex-wrap.flex-md-nowrap.gx-3
-                  .col 
-                    .speaker.d-flex.align-items-start
-                      |
-                      |
-                      img(src="./imgs/avatar/happy-asian-man-standing-with-arms-crossed-grey-wall.jpg")
-                      .name-jop
-                        .name Logan Wilson
-                        .jop CEO / FOUNDER
-                  .col 
-                    .time #[i.bi.bi-clock] 9:00 - 9:45 AM
-                  .col 
-                    .conference #[i.bi-layout-sidebar] Conference Hall 3
+        - 
+          let events = [
+            { 
+              day: "one",
+              title: "Startup Development Ideas",
+              img: "./imgs/schedule/business-woman-making-presentation-office.jpg",
+              discription: "You are free to download any HTML CSS template from TemplateMo website. You can use any template for business purposes. You are not allowed to redistribute the downloadable ZIP file on any other template website. Thank you",
+              avatar: "./imgs/avatar/happy-asian-man-standing-with-arms-crossed-grey-wall.jpg",
+              name: "Logan Wilson",
+              jop: "CEO / FOUNDER",
+              time: "9:00 - 9:45 AM",
+              location: "Conference Hall 3"
+            },
+            { 
+              day: "one",
+              title: "Introduction to Online Businesses",
+              img: "./imgs/schedule/clayton-cardinalli-JMoFpdqL3XM-unsplash.jpg",
+              discription: "Quisque mollis, ante non semper ultricies, nulla sapien sollicitudin augue, id scelerisque nunc turpis nec urna. Class aptent taciti sociosqu ad litora.",
+              avatar: "./imgs/avatar/indoor-shot-beautiful-happy-african-american-woman-smiling-cheerfully-keeping-her-arms-folded-relaxing-indoors-after-morning-lectures-university.jpg",
+              name: "Natalie",
+              jop: "EVENT PLANNER",
+              time: "10:00 - 10:45 AM",
+              location: "100-D Room"
+            },
+            { 
+              day: "one",
+              title: "Bootstrapping Startup",
+              img: "./imgs/schedule/fabian-friedrich-JDUVM9_VaZE-unsplash.jpg",
+              discription: "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut consequat purus posuere tortor efficitur, sit amet dignissim libero aliquam",
+              avatar: "./imgs/avatar/portrait-good-looking-brunette-young-asian-woman.jpg",
+              name: "Thomas",
+              jop: "STARTUP COACH",
+              time: " 11:00 - 11:45 AM",
+              location: "100-B Room"
+            },
+            { 
+              day: "two",
+              title: "Building a famous company",
+              img: "./imgs/schedule/jason-goodman-bzqU01v-G54-unsplash.jpg",
+              discription: "Quisque mollis, ante non semper ultricies, nulla sapien sollicitudin augue, id scelerisque nunc turpis nec urna. Class aptent taciti sociosqu ad litora torquent per conubia.",
+              avatar: "./imgs/avatar/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction.jpg",
+              name: "Isabella",
+              jop: "Event Manager",
+              time: "9:00 - 9:45 AM",
+              location: "Conference Hall 2"
+            },
+            { 
+              day: "two",
+              title: "Dev Ops life in corporate",
+              img: "./imgs/schedule/jeshoots-com-TWRCH-GaKr4-unsplash.jpg",
+              discription: "Quisque mollis, ante non semper ultricies, nulla sapien sollicitudin augue, id scelerisque nunc turpis nec urna. Class aptent taciti sociosqu ad litora torquent per conubia.",
+              avatar: "./imgs/avatar/portrait-good-looking-brunette-young-asian-woman.jpg",
+              name: "Samantha",
+              jop: "TOP LEVEL SPEAKERr",
+              time: "9:00 - 9:45 AM",
+              location: "100-A Room"
+            },
+            { 
+              day: "three",
+              title: "Maintaining a successful business",
+              img: "./imgs/schedule/people-smiling-while-conference-room.jpg",
+              discription: "Quisque mollis, ante non semper ultricies, nulla sapien sollicitudin augue, id scelerisque nunc turpis nec urna. Class aptent taciti sociosqu.",
+              avatar: "./imgs/avatar/happy-asian-man-standing-with-arms-crossed-grey-wall.jpg",
+              name: "Isabella",
+              jop: "EVENT MANAGER",
+              time: "9:00 - 9:45 AM",
+              location: "100-A Room"
+            },
+            { 
+              day: "three",
+              title: "Working Life in Corporate Environment",
+              img: "./imgs/schedule/jeshoots-com-TWRCH-GaKr4-unsplash.jpg",
+              discription: "Quisque mollis, ante non semper ultricies, nulla sapien sollicitudin augue, id scelerisque nunc turpis nec urna. Class aptent taciti sociosqu.",
+              avatar: "./imgs/avatar/senior-man-white-sweater-eyeglasses.jpg",
+              name: "Samantha",
+              jop: "TOP LEVEL SPEAKER",
+              time: "9:00 - 9:45 AM",
+              location: "100-A Room"
+            },
+            { 
+              day: "four",
+              title: "Working Life in Corporate Environment",
+              img: "./imgs/schedule/jeshoots-com-TWRCH-GaKr4-unsplash.jpg",
+              discription: "Quisque mollis, ante non semper ultricies, nulla sapien sollicitudin augue, id scelerisque nunc turpis nec urna. Class aptent taciti sociosqu.",
+              avatar: "./imgs/avatar/senior-man-white-sweater-eyeglasses.jpg",
+              name: "Samantha",
+              jop: "TOP LEVEL SPEAKER",
+              time: "9:00 - 9:45 AM",
+              location: "100-A Room"
+            },
+          ]
 
+        each event in events
+          .event.py-5.border-bottom&attributes({class: event.day})
+            .row.align-items-start
+              .col.col-12.col-lg-4.mb-3.mb-lg-0
+                .image: img&attributes({src: event.img})
+              .col
+                .content
+                  h3.title #{event.title}
+                  p.discription.mb-3 #{event.discription}
+                  .info.row.row-cols-auto.justify-content-center.justify-content-md-between.align-items-center.flex-wrap.flex-md-nowrap.gx-4.gx-md-3.gy-3.gy-md-0
+                    .col 
+                      .speaker.d-flex.align-items-start
+                        |
+                        |
+                        img.me-3&attributes({src: event.avatar})
+                        .name-jop
+                          .name #{event.name}
+                          .jop #{event.jop}
+                    .col 
+                      .time #[i.bi.bi-clock.me-2]  #{event.time}
+                    .col 
+                      .location #[i.bi-layout-sidebar.me-2] #{event.location}
+  .rigister
+    .overlay
+    .container
+      .content.row.align-items-center
+        .col.col-12.col-lg-7.mb-4.mb-lg-0
+          h3.main-heading.mb-4 Become an #[span event speaker?]
+          p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore
+        .col.d-none.d-lg-block.col-2
+        .col
+          a.rigister-btn.main-btn(href="#") Rigister Today
+  .pricing#pricing
+    .container
+      .content.row.row-cols-1.row-cols-md-2.row-cols-lg-3

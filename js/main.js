@@ -9,11 +9,9 @@ function toggleNav() {
 }
 
 function selectDay() {
-  let clicked = $(this);
+  let $clicked = $(this);
   $(".day").removeClass("active");
-  clicked.addClass("active");
-  $(".shedule").fadeOut()
-  $(".shedule").filter(function (_ind ,_el) {
-    return _el.attr("data-day") === clicked.attr("data-day");
-  }).fadeIn()
+  $clicked.addClass("active");
+  $(`.shedules .event:not(${$clicked.attr("data-day")})`).fadeOut();
+  $($clicked.attr("data-day")).fadeIn();
 }

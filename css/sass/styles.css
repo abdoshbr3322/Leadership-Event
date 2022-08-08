@@ -263,7 +263,8 @@ header .buy a:hover {
 }
 
 .about {
-  padding: 110px 0;
+  padding: 80px 0;
+  background-color: #eff7fe;
 }
 .about h4.title {
   font-size: 32px;
@@ -296,6 +297,9 @@ header .buy a:hover {
   color: #717275;
 }
 
+.shedules {
+  padding: 80px 0 0 0;
+}
 .shedules .days .col:not(:first-child) .day {
   border-left-color: rgba(13, 202, 240, 0.12);
 }
@@ -325,6 +329,12 @@ header .buy a:hover {
   box-shadow: 0px 16px 48px 0 rgba(0, 0, 0, 0.171);
   isolation: isolate;
 }
+.shedules .days .col .day:hover {
+  isolation: isolate;
+}
+.shedules .events .event:not(.one) {
+  display: none;
+}
 .shedules .events .event .image img {
   border-radius: 20px;
 }
@@ -337,11 +347,51 @@ header .buy a:hover {
   font-size: 18px;
   color: #717275;
 }
-.shedules .events .event .content .info img {
+.shedules .events .event .content .info .speaker img {
   width: 45px;
   height: 45px;
   border-radius: 50%;
   object-fit: cover;
+}
+.shedules .events .event .content .info .speaker .name-jop {
+  line-height: 1.6;
+}
+.shedules .events .event .content .info .speaker .name {
+  color: #212529;
+}
+.shedules .events .event .content .info .speaker .jop {
+  font-size: 12px;
+  color: #717275;
+}
+
+.rigister {
+  padding: 100px 0;
+  position: relative;
+  z-index: 0;
+  background-image: url("../../imgs/terren-hurst-blgOFmPIlr0-unsplash.jpg");
+  background-size: cover;
+}
+.rigister .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-color: #000;
+  z-index: -1;
+}
+.rigister .main-heading, .rigister .text {
+  color: white;
+}
+.rigister .rigister-btn {
+  cursor: pointer;
+  color: #000;
+  background-color: #fff;
+}
+.rigister .rigister-btn:hover {
+  background-color: #0dcaf0;
+  color: #fff;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -87,7 +87,8 @@
   }
 }
 .about {
-  padding: 110px 0;
+  padding: 80px 0;
+  background-color: $section-bg-color;
   h4.title {
     @include text-style(32px, 600, #000);
   }
@@ -122,6 +123,7 @@
   }
 }
 .shedules {
+  padding: 80px 0 0 0;
   .days {
     .col:not(:first-child) .day {
       border-left-color: rgba(13, 202, 240, 0.12);
@@ -150,10 +152,16 @@
           @extend %main-color;
         }
       }
+      &:hover {
+        isolation: isolate;
+      }
     }
   }
   .events {
     .event {
+        &:not(.one) {
+          display: none;
+        }
         .image img {
           border-radius: 20px;
         }
@@ -165,13 +173,47 @@
             @include text-style(18px ,null ,#717275);
           }
           .info {
-            img {
+            .speaker img {
               @include circle(45px);
               object-fit: cover;
+            }
+            .speaker .name-jop {
+              line-height: 1.6;
+            }
+            .speaker .name{
+              color: #212529;
+            }
+            .speaker .jop {
+              @include text-style(12px ,null ,#717275);
             }
           }
         }
 
+    }
+  }
+}
+.rigister {
+  padding: 100px 0;
+  position: relative;
+  z-index: 0;
+  .overlay {
+    @include overlay(.5 ,#000);
+    z-index: -1;
+  }
+  background: {
+    image: url("../../imgs/terren-hurst-blgOFmPIlr0-unsplash.jpg");
+    size: cover;
+  }
+  .main-heading ,.text {
+    color: white;
+  }
+  .rigister-btn {
+    cursor: pointer;
+    color: #000;
+    background-color: #fff;
+    &:hover {
+      background-color: $main-color;
+      color: #fff;
     }
   }
 }
