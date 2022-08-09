@@ -1,0 +1,12 @@
+@use "../helpers/globals" as *;
+@use "../helpers/mixins" as *;
+@use "../helpers/placeholders" as *;
+
+.custom-card {
+  border-radius: 20px;
+  overflow: hidden;
+  .head {
+    background-color: $secondary-color;
+    @include text-style(45px ,bold ,#fff);
+  }
+}

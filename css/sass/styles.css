@@ -32,6 +32,17 @@
   box-shadow: 0 16px 48px 0 rgba(0, 0, 0, 0.176);
 }
 
+.custom-card {
+  border-radius: 20px;
+  overflow: hidden;
+}
+.custom-card .head {
+  background-color: #273053;
+  font-size: 45px;
+  font-weight: bold;
+  color: #fff;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -399,11 +410,6 @@ header .buy a:hover {
 }
 .pricing .plan {
   box-shadow: 1px 16px 40px rgba(0, 0, 0, 0.188);
-  border-radius: 20px;
-  overflow: hidden;
-}
-.pricing .plan .head {
-  background-color: #273053;
 }
 .pricing .plan .head .title, .pricing .plan .head .price {
   font-size: 32px;
@@ -416,6 +422,64 @@ header .buy a:hover {
 .pricing .plan .body, .pricing .plan .foot p {
   font-size: 18px;
   color: #717275;
+}
+
+.venue {
+  padding: 120px 0;
+  background-color: #eff7fe;
+}
+.venue .map {
+  border-radius: 15px;
+  overflow: hidden;
+}
+.venue .info {
+  box-shadow: 0 15px 45px 0 rgba(0, 0, 0, 0.133);
+}
+.venue .info .head .title {
+  font-size: 46px;
+  font-weight: bold;
+  color: #fff;
+}
+.venue .body .location {
+  font-size: 32px;
+  font-weight: 800;
+  color: #000;
+  letter-spacing: -1px;
+}
+.venue .body .contact {
+  font-size: 24px;
+  font-weight: bold;
+  color: #717275;
+  transition: 0.3s;
+}
+.venue .body .contact:hover {
+  color: #0dcaf0;
+}
+
+.contact {
+  padding: 120px 0;
+  background-image: url("../../imgs/maria-stewart-p4tj0g-_aMM-unsplash.jpg");
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+}
+@media (min-width: 992px) {
+  .contact .form {
+    max-width: 70%;
+  }
+}
+.contact .form .input {
+  border: none;
+  background-color: #f0f8ff;
+}
+.contact .form input[type=submit] {
+  background-color: #0dcaf0;
+  border: none;
+}
+.contact .form input[type=submit]:hover {
+  background-color: #273053;
+}
+.contact .form input[type=submit]:focus {
+  color: #fff !important;
 }
 
 /*# sourceMappingURL=styles.css.map */

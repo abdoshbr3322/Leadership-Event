@@ -9,15 +9,15 @@ header.w-100.py-2
       h4 Leadership #[br] Event
 
     ul.nav.desktop-nav.row.gx-4.d-none.d-lg-flex.me-5
-      - let links = {Home: "#" ,About: "#about" ,Shedules: "#shedules" ,Pricing: "#pricing" ,Contact: "#contact"}
+      - let links = {Home: "#" ,About: "#about" ,Shedules: "#shedules" ,Pricing: "#pricing" , Venue: "#venue",Contact: "#contact"}
       - for (let link in links)
         li.col: a.d-block.p-2(href=links[link]) #{link}
     .buy
       a(
-        href="https://storage.googleapis.com/drive-bulk-export-anonymous/20220801T191316Z/4133399871716478688/b132c8c5-9539-40b5-9925-899ccbccd7ee/1/7603df2c-f66b-45fb-bbe1-619df0e3fa21?authuser"
+        href="#"
       ).d-block.py-2.px-3 Buy Ticket
 
-    
+
     ul.col-12.nav.mobile-nav.row.row-cols-1.d-lg-none
       - for (let link in links)
         li.col: a.d-block.py-3(href=links[link]) #{link}

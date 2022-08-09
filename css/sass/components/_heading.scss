@@ -1,6 +1,7 @@
 @use "../helpers/globals" as *;
 @use "../helpers/mixins" as *;
 @use "../helpers/placeholders" as *;
+
 .main-heading {
   @include text-style(46px, bold, #000);
   span {

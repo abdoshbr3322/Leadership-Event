@@ -1,8 +1,5 @@
 extends ./layout/layout
 
-block append head
-  script(src="https://polyfill.io/v3/polyfill.min.js?features=default")
-  script(src="./js/map.js")
 block title
   title Leadership Event
 block pageContent
@@ -213,7 +210,7 @@ block pageContent
       h4.main-heading.text-center.mb-5 Get Your #[span Tickets]
       .content.row.row-cols-1.row-cols-md-2.row-cols-lg-3.gy-5
         .col
-          .plan.pb-3
+          .plan.custom-card.pb-3
             .head.d-flex.justify-content-between.align-items-center.px-4.py-4
               h5.title.m-0 Early bird
               h6.price.m-0 $640
@@ -229,7 +226,7 @@ block pageContent
               p.mb-4 Quick group meetings for multiple teams
               button.buy.main-btn Buy Tickets
         .col
-          .plan.pb-3
+          .plan.custom-card.pb-3
             .head.d-flex.justify-content-between.align-items-center.px-4.py-4
               h5.title.m-0 Gold
               h6.price.m-0 $840
@@ -245,7 +242,7 @@ block pageContent
               p.mb-4 Quick group meetings for multiple teams
               button.buy.main-btn Buy Tickets
         .col
-          .plan.pb-3
+          .plan.custom-card.pb-3
             .head.d-flex.justify-content-between.align-items-center.px-4.py-4
               h5.title.m-0 Platinum
               h6.price.m-0 $1,240
@@ -260,8 +257,41 @@ block pageContent
             .foot.pt-2.px-4.py-3
               p.mb-4 group talks and private chats for multiple teams
               button.buy.main-btn Buy Tickets
-  .venue
+  .venue#venue.custom-card
     .container
-      .content.row.cols-1.col-lg-2
-        .map#map
-
+      .main-heading.mb-5 Here you go #[span Venue]
+      .content.row
+        .col.col-12.col-lg-6.mb-4.mb-lg-0
+          .map
+            iframe(class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1511.091461689997!2d-73.9866630916883!3d40.758001294831736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855a96da09d%3A0x860bf5a5e1a00a68!2sTimes%20Square%2C%20New%20York%2C%20NY%2010036%2C%20USA!5e0!3m2!1sen!2ssg!4v1643035529098!5m2!1sen!2ssg",
+              width="100%", height="371.59", allowfullscreen="", loading="lazy")
+        .col.col-12.col-lg-6
+          .info.custom-card
+            .head.px-5.py-4
+              h2.title.m-0 Times Square
+            .body.px-5.py-5
+              .location.d-flex
+                i.bi.bi-geo-alt.me-3
+                h3.mb-3 102 South. 7th Street, New York, NY 10036, USA
+              a(href="#").contact-info.d-block.mb-3 #[i.bi.bi-envelope.me-3]
+                | hi@company.com
+              a(href="#").contact-info.d-block #[i.bi.bi-telephone.me-3]
+                | 010-020-0340
+  .contact#contact
+    .container.d-flex.justify-content-center
+      .form.custom-card.bg-white
+        .head.px-5.py-4
+          h2.title.m-0 Please Say Hi
+        .body.px-5.py-5
+          form
+            .row.gy-4
+              .col.col-12.col-md-6.col-lg-4
+                input(type="text", placeholder="name", name="name", required).input.form-control.py-2
+              .col.col-12.col-md-6.col-lg-4
+                input(type="email", placeholder="Email", name="mail", reuired).input.form-control.py-2
+              .col.col-12.col-md-6.col-lg-4
+                input(type="text", placeholder="Subject", name="subject").input.form-control.py-2
+              .col.col-12
+                textarea(type="text", placeholder="Message", name="message").input.form-control.py-2
+              .col.col-12
+                input(type="submit").main-btn.form-control

@@ -4,7 +4,7 @@
 
 header {
   @include position-style(fixed, 0, 0);
-  background-color: #273053;
+  background-color: $secondary-color;
   z-index: 9999;
   .nav-toggle {
     height: 30px;

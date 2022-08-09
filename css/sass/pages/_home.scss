@@ -5,7 +5,7 @@
 .banner {
   padding-top: 140px;
   padding-bottom: 20px;
-  background-image: linear-gradient(to top, #273053 30%, transparent);
+  background-image: linear-gradient(to top, $secondary-color 30%, transparent);
   position: relative;
   
   .video-wrapper {
@@ -94,7 +94,7 @@
   }
   .story {
     p.info {
-      @include text-style(18px, null, #717275);
+      @include text-style(18px, null, $ligh-black-color);
     }
     .btns .btn-1 {
       @extend %main-color;
@@ -118,7 +118,7 @@
       }
     }
     .discription {
-      color: #717275;
+      color: $ligh-black-color;
     }
   }
 }
@@ -140,7 +140,7 @@
         text-transform: capitalize;
       }
       .date {
-        @include text-style(18px, null, #717275);
+        @include text-style(18px, null, $ligh-black-color);
       }
       &:hover ,&.active {
         z-index: 2;
@@ -169,7 +169,7 @@
             @include text-style(32px ,bold ,#000)
           }
           .discription {
-            @include text-style(18px ,null ,#717275);
+            @include text-style(18px ,null ,$ligh-black-color);
           }
           .info {
             .speaker img {
@@ -183,7 +183,7 @@
               color: #212529;
             }
             .speaker .jop {
-              @include text-style(12px ,null ,#717275);
+              @include text-style(12px ,null ,$ligh-black-color);
             }
           }
         }
@@ -220,10 +220,7 @@
   padding: 120px 0;
   .plan {
     box-shadow: 1px 16px 40px rgba(0, 0, 0, 0.188);
-    border-radius: 20px;
-    overflow: hidden;
     .head {
-      background-color: #273053;
       .title ,.price {
         @include text-style(32px ,bold ,#fff);
       }
@@ -232,7 +229,63 @@
       }
     }
     .body ,.foot p {
-      @include text-style(18px ,null ,#717275)
+      @include text-style(18px ,null ,$ligh-black-color)
+    }
+  }
+}
+
+.venue {
+  padding: 120px 0;
+  background-color: $section-bg-color;
+  .map {
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  .info {
+    box-shadow: 0 15px 45px 0 rgba(0, 0, 0, 0.133);
+    .head {
+      .title {
+        @include text-style(46px ,bold ,#fff)
+      }
+    }
+  }
+  .body {
+    .location {
+      @include text-style(32px ,800 ,#000);
+      letter-spacing: -1px;
+    }
+    .contact {
+      @include text-style(24px ,bold ,$ligh-black-color);
+      transition: $main-transition;
+      &:hover {
+        color: $main-color;
+      }
+    }
+  }
+}
+
+.contact {
+  padding: 120px 0;
+  background-image: url("../../imgs/maria-stewart-p4tj0g-_aMM-unsplash.jpg");
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+  .form {
+    @include breakpoint("medium") {
+      max-width: 70%;
+    }
+    .input {
+      border: none;
+      background-color: #f0f8ff;
+    }
+    input[type="submit"] {
+      background-color: $main-color;
+      border: none;
+      &:hover {
+        background-color: $secondary-color;
+      }
+      &:focus {
+        color: #fff !important;
+      }
     }
   }
 }
