@@ -6,7 +6,7 @@
   transform: translate(-50%, -50%);
 }
 
-.about .story .btns .btn-1, .shedules .days .col .day:hover .title, .shedules .days .col .day.active .title, header .logo a, header ul.nav li a:hover, .main-heading span {
+.about .story .btns .btn-1, .shedules .days .col .day:hover .title, .shedules .days .col .day.active .title, .logo a, header ul.nav li a:hover, header ul.nav li a.active, .main-heading span {
   color: #0dcaf0;
 }
 
@@ -35,6 +35,7 @@
 .custom-card {
   border-radius: 20px;
   overflow: hidden;
+  box-shadow: 1px 16px 40px rgba(0, 0, 0, 0.19);
 }
 .custom-card .head {
   background-color: #273053;
@@ -81,6 +82,26 @@ button {
   color: white;
 }
 
+.logo a i {
+  font-size: 38px;
+  margin-right: 5px;
+}
+@media (max-width: 575px) {
+  .logo a i {
+    font-size: 25px;
+  }
+}
+.logo a h4 {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+}
+@media (max-width: 575px) {
+  .logo a h4 {
+    font-size: 16px;
+  }
+}
+
 header {
   position: fixed;
   top: 0;
@@ -91,6 +112,7 @@ header {
 header .nav-toggle {
   height: 30px;
   width: 40px;
+  background-color: transparent;
   cursor: pointer;
 }
 @media (max-width: 575px) {
@@ -130,25 +152,6 @@ header .nav-toggle.nav-active span::before {
 header .nav-toggle.nav-active span::after {
   transform: rotate(-45deg);
   top: 0;
-}
-header .logo a i {
-  font-size: 38px;
-  margin-right: 5px;
-}
-@media (max-width: 575px) {
-  header .logo a i {
-    font-size: 25px;
-  }
-}
-header .logo a h4 {
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 1;
-}
-@media (max-width: 575px) {
-  header .logo a h4 {
-    font-size: 16px;
-  }
 }
 header ul.nav.mobile-nav {
   display: none;
@@ -392,7 +395,8 @@ header .buy a:hover {
   background-color: #000;
   z-index: -1;
 }
-.rigister .main-heading, .rigister .text {
+.rigister .main-heading,
+.rigister .text {
   color: white;
 }
 .rigister .rigister-btn {
@@ -408,10 +412,8 @@ header .buy a:hover {
 .pricing {
   padding: 120px 0;
 }
-.pricing .plan {
-  box-shadow: 1px 16px 40px rgba(0, 0, 0, 0.188);
-}
-.pricing .plan .head .title, .pricing .plan .head .price {
+.pricing .plan .head .title,
+.pricing .plan .head .price {
   font-size: 32px;
   font-weight: bold;
   color: #fff;
@@ -419,7 +421,8 @@ header .buy a:hover {
 .pricing .plan .head .price {
   font-size: 24px;
 }
-.pricing .plan .body, .pricing .plan .foot p {
+.pricing .plan .body,
+.pricing .plan .foot p {
   font-size: 18px;
   color: #717275;
 }
@@ -432,27 +435,33 @@ header .buy a:hover {
   border-radius: 15px;
   overflow: hidden;
 }
-.venue .info {
-  box-shadow: 0 15px 45px 0 rgba(0, 0, 0, 0.133);
-}
-.venue .info .head .title {
-  font-size: 46px;
+.venue .info .body .location i,
+.venue .info .body .location h3 {
+  font-size: 30px;
   font-weight: bold;
-  color: #fff;
-}
-.venue .body .location {
-  font-size: 32px;
-  font-weight: 800;
   color: #000;
+}
+@media (max-width: 575px) {
+  .venue .info .body .location i,
+.venue .info .body .location h3 {
+    font-size: 24px;
+  }
+}
+.venue .info .body .location h3 {
   letter-spacing: -1px;
 }
-.venue .body .contact {
+.venue .info .body .contact-info {
   font-size: 24px;
   font-weight: bold;
   color: #717275;
   transition: 0.3s;
 }
-.venue .body .contact:hover {
+@media (max-width: 575px) {
+  .venue .info .body .contact-info {
+    font-size: 20px;
+  }
+}
+.venue .info .body .contact-info:hover {
   color: #0dcaf0;
 }
 
@@ -480,6 +489,51 @@ header .buy a:hover {
 }
 .contact .form input[type=submit]:focus {
   color: #fff !important;
+}
+
+footer {
+  padding: 120px 0;
+}
+@media (max-width: 575px) {
+  footer .footer-menu .logo a h4 {
+    font-size: 22px;
+  }
+}
+footer .footer-menu .nav .nav-item a {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 22px;
+  color: #000;
+  transition: 0.3s;
+}
+footer .footer-menu .nav .nav-item a:hover {
+  background-color: #0dcaf0;
+  color: #fff;
+}
+footer .footer-links {
+  color: #717275;
+}
+footer .footer-links a {
+  color: #717275;
+}
+footer .footer-links a {
+  transition: 0.3s;
+}
+footer .footer-links a:hover {
+  color: #0dcaf0;
+}
+footer .scroll-top button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #000;
+  transition: 0.3s;
+}
+footer .scroll-top button:hover {
+  background-color: #0dcaf0;
+  color: #f0f8ff;
 }
 
 /*# sourceMappingURL=styles.css.map */

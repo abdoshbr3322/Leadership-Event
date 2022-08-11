@@ -3,7 +3,7 @@ extends ./layout/layout
 block title
   title Leadership Event
 block pageContent
-  .banner
+  .banner#banner
     .container
       .content.d-flex.flex-column.align-items-center.text-center
         .video-wrapper
@@ -257,7 +257,7 @@ block pageContent
             .foot.pt-2.px-4.py-3
               p.mb-4 group talks and private chats for multiple teams
               button.buy.main-btn Buy Tickets
-  .venue#venue.custom-card
+  .venue#venue
     .container
       .main-heading.mb-5 Here you go #[span Venue]
       .content.row
@@ -267,9 +267,9 @@ block pageContent
               width="100%", height="371.59", allowfullscreen="", loading="lazy")
         .col.col-12.col-lg-6
           .info.custom-card
-            .head.px-5.py-4
+            .head.px-3.px-sm-5.py-4
               h2.title.m-0 Times Square
-            .body.px-5.py-5
+            .body.px-3.px-sm-5.py-4
               .location.d-flex
                 i.bi.bi-geo-alt.me-3
                 h3.mb-3 102 South. 7th Street, New York, NY 10036, USA
@@ -295,3 +295,24 @@ block pageContent
                 textarea(type="text", placeholder="Message", name="message").input.form-control.py-2
               .col.col-12
                 input(type="submit").main-btn.form-control
+  footer
+    .container
+      .footer-menu.d-flex.align-items-center.justify-content-between.flex-column.flex-sm-row.pb-5.border-bottom
+        +logo
+        ul.nav
+          - let brands = ["facebook" ,"instagram" ,"twitter" ,"whatsapp"];
+          each brand in brands
+            li.nav-item.p-2
+              a.d-flex.justify-content-center.align-items-center(href="#")
+                i.bi&attributes({class: `bi-${brand}`})
+      .footer-links.d-flex.align-items-center.flex-column.flex-md-row.pt-5.text-center.text-md-startr
+        ul.sub-nav.nav.justify-content-center.me-md-auto.mb-3.mb-md-0
+          - let subNavLinks = ["Our Story" ,"Code of Conduct" ,"Privacy and Terms" ,"Contact"];
+          each link in subNavLinks
+            li.nav-item
+              a.d-block.p-2(href="#") #{link}
+        .copyright.me-md-4.mb-3.mb-md-0
+          p.text.mb-3 Copyright © 2022 Leadership Event Co., Ltd. #[br] All Rights Reserved.
+          .design Design: #[a(href="https://github.com/abdoshbr3322/" ,target="_blank") Abdullah]
+        .scroll-top
+          button.d-block.d-flex.justify-content-center.align-items-center.m-0: i.bi.bi-arrow-up

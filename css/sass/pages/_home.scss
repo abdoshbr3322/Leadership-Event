@@ -7,7 +7,7 @@
   padding-bottom: 20px;
   background-image: linear-gradient(to top, $secondary-color 30%, transparent);
   position: relative;
-  
+
   .video-wrapper {
     @include position-style(absolute, 0, 0);
     width: 100%;
@@ -131,7 +131,7 @@
     .col .day {
       transition: $main-transition;
       border: 3px solid transparent;
-      @include prefixer(user-select ,none ,(webkit ,moz));
+      @include prefixer(user-select, none, (webkit, moz));
       cursor: pointer;
       .title {
         @include text-style(36px, bold, #000);
@@ -142,7 +142,8 @@
       .date {
         @include text-style(18px, null, $ligh-black-color);
       }
-      &:hover ,&.active {
+      &:hover,
+      &.active {
         z-index: 2;
         border-left: 3px solid $main-color;
         box-shadow: 0px 16px 48px 0 rgba(0, 0, 0, 0.171);
@@ -158,36 +159,35 @@
   }
   .events {
     .event {
-        &:not(.one) {
-          display: none;
+      &:not(.one) {
+        display: none;
+      }
+      .image img {
+        border-radius: 20px;
+      }
+      .content {
+        .title {
+          @include text-style(32px, bold, #000);
         }
-        .image img {
-          border-radius: 20px;
+        .discription {
+          @include text-style(18px, null, $ligh-black-color);
         }
-        .content {
-          .title {
-            @include text-style(32px ,bold ,#000)
+        .info {
+          .speaker img {
+            @include circle(45px);
+            object-fit: cover;
           }
-          .discription {
-            @include text-style(18px ,null ,$ligh-black-color);
+          .speaker .name-jop {
+            line-height: 1.6;
           }
-          .info {
-            .speaker img {
-              @include circle(45px);
-              object-fit: cover;
-            }
-            .speaker .name-jop {
-              line-height: 1.6;
-            }
-            .speaker .name{
-              color: #212529;
-            }
-            .speaker .jop {
-              @include text-style(12px ,null ,$ligh-black-color);
-            }
+          .speaker .name {
+            color: #212529;
+          }
+          .speaker .jop {
+            @include text-style(12px, null, $ligh-black-color);
           }
         }
-
+      }
     }
   }
 }
@@ -196,14 +196,15 @@
   position: relative;
   z-index: 0;
   .overlay {
-    @include overlay(.5 ,#000);
+    @include overlay(0.5, #000);
     z-index: -1;
   }
   background: {
     image: url("../../imgs/terren-hurst-blgOFmPIlr0-unsplash.jpg");
     size: cover;
   }
-  .main-heading ,.text {
+  .main-heading,
+  .text {
     color: white;
   }
   .rigister-btn {
@@ -219,17 +220,18 @@
 .pricing {
   padding: 120px 0;
   .plan {
-    box-shadow: 1px 16px 40px rgba(0, 0, 0, 0.188);
     .head {
-      .title ,.price {
-        @include text-style(32px ,bold ,#fff);
+      .title,
+      .price {
+        @include text-style(32px, bold, #fff);
       }
       .price {
         font-size: 24px;
       }
     }
-    .body ,.foot p {
-      @include text-style(18px ,null ,$ligh-black-color)
+    .body,
+    .foot p {
+      @include text-style(18px, null, $ligh-black-color);
     }
   }
 }
@@ -242,23 +244,28 @@
     overflow: hidden;
   }
   .info {
-    box-shadow: 0 15px 45px 0 rgba(0, 0, 0, 0.133);
-    .head {
-      .title {
-        @include text-style(46px ,bold ,#fff)
+    .body {
+      .location {
+        i,
+        h3 {
+          @include text-style(30px, bold, #000);
+          @include breakpoint("small-mobile") {
+            font-size: 24px;
+          }
+        }
+        h3 {
+          letter-spacing: -1px;
+        }
       }
-    }
-  }
-  .body {
-    .location {
-      @include text-style(32px ,800 ,#000);
-      letter-spacing: -1px;
-    }
-    .contact {
-      @include text-style(24px ,bold ,$ligh-black-color);
-      transition: $main-transition;
-      &:hover {
-        color: $main-color;
+      .contact-info {
+        @include text-style(24px, bold, $ligh-black-color);
+        @include breakpoint("small-mobile") {
+          font-size: 20px;
+        }
+        transition: $main-transition;
+        &:hover {
+          color: $main-color;
+        }
       }
     }
   }

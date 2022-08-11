@@ -5,6 +5,7 @@
 .custom-card {
   border-radius: 20px;
   overflow: hidden;
+  box-shadow: 1px 16px 40px rgb(0 0 0 / 19%);
   .head {
     background-color: $secondary-color;
     @include text-style(45px ,bold ,#fff);

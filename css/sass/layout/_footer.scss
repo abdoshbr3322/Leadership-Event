@@ -1,3 +1,44 @@
 @use "../helpers/globals" as *;
 @use "../helpers/mixins" as *;
 @use "../helpers/placeholders" as *;
+
+footer {
+  padding: 120px 0;
+  .footer-menu {
+    .logo a h4 {
+      @include breakpoint("small-mobile") {
+        font-size: 22px;
+      }
+    }
+    .nav .nav-item a {
+      @include circle(45px);
+      @include text-style(22px, null, #000);
+      transition: $main-transition;
+      &:hover {
+        background-color: $main-color;
+        color: #fff;
+      }
+    }
+  }
+  .footer-links {
+    color: $ligh-black-color;
+    a {
+      color: $ligh-black-color;
+    }
+    a {
+      transition: $main-transition;
+      &:hover {
+        color: $main-color;
+      }
+    }
+  }
+  .scroll-top button {
+    @include circle(45px);
+    @include text-style(24px, null, #000);
+    transition: $main-transition;
+    &:hover {
+      background-color: $main-color;
+      color: #f0f8ff;
+    }
+  }
+}

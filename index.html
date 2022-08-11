@@ -16,11 +16,11 @@
     <header class="w-100 py-2">
       <div class="container">
         <div class="content row row-cols-auto g-0 align-items-center justify-content-between justify-content-lg-start">
-          <div class="nav-toggle d-flex align-items-center d-lg-none"><span class="d-block"></span></div>
+          <button class="nav-toggle d-flex align-items-center d-lg-none"><span class="d-block"></span></button>
           <div class="logo me-lg-auto"><a class="d-flex align-items-center" href="#"><i class="bi-bullseye brand-logo"></i>
-              <h4>Leadership <br> Event</h4></a></div>
+              <h4>Leadership <br/> Event</h4></a></div>
           <ul class="nav desktop-nav row gx-4 d-none d-lg-flex me-5">
-            <li class="col"><a class="d-block p-2" href="#">Home</a></li>
+            <li class="col"><a class="d-block p-2" href="#banner">Home</a></li>
             <li class="col"><a class="d-block p-2" href="#about">About</a></li>
             <li class="col"><a class="d-block p-2" href="#shedules">Shedules</a></li>
             <li class="col"><a class="d-block p-2" href="#pricing">Pricing</a></li>
@@ -29,7 +29,7 @@
           </ul>
           <div class="buy"><a class="d-block py-2 px-3" href="#">Buy Ticket</a></div>
           <ul class="col-12 nav mobile-nav row row-cols-1 d-lg-none">
-            <li class="col"><a class="d-block py-3" href="#">Home</a></li>
+            <li class="col"><a class="d-block py-3" href="#banner">Home</a></li>
             <li class="col"><a class="d-block py-3" href="#about">About</a></li>
             <li class="col"><a class="d-block py-3" href="#shedules">Shedules</a></li>
             <li class="col"><a class="d-block py-3" href="#pricing">Pricing</a></li>
@@ -39,7 +39,7 @@
         </div>
       </div>
     </header>
-    <div class="banner">
+    <div class="banner" id="banner">
       <div class="container">
         <div class="content d-flex flex-column align-items-center text-center">
           <div class="video-wrapper">
@@ -458,7 +458,7 @@
         </div>
       </div>
     </div>
-    <div class="venue custom-card" id="venue">
+    <div class="venue" id="venue">
       <div class="container">
         <div class="main-heading mb-5">Here you go <span>Venue</span></div>
         <div class="content row">
@@ -469,10 +469,10 @@
           </div>
           <div class="col col-12 col-lg-6">
             <div class="info custom-card">
-              <div class="head px-5 py-4">
+              <div class="head px-3 px-sm-5 py-4">
                 <h2 class="title m-0">Times Square</h2>
               </div>
-              <div class="body px-5 py-5">
+              <div class="body px-3 px-sm-5 py-4">
                 <div class="location d-flex"><i class="bi bi-geo-alt me-3"></i>
                   <h3 class="mb-3">102 South. 7th Street, New York, NY 10036, USA</h3>
                 </div><a class="contact-info d-block mb-3" href="#"><i class="bi bi-envelope me-3"></i>hi@company.com</a><a class="contact-info d-block" href="#"><i class="bi bi-telephone me-3"></i>010-020-0340</a>
@@ -512,6 +512,35 @@
         </div>
       </div>
     </div>
+    <footer>
+      <div class="container">
+        <div class="footer-menu d-flex align-items-center justify-content-between flex-column flex-sm-row pb-5 border-bottom">
+          <div class="logo me-lg-auto"><a class="d-flex align-items-center" href="#"><i class="bi-bullseye brand-logo"></i>
+              <h4>Leadership <br/> Event</h4></a></div>
+          <ul class="nav">
+            <li class="nav-item p-2"><a class="d-flex justify-content-center align-items-center" href="#"><i class="bi bi-facebook"></i></a></li>
+            <li class="nav-item p-2"><a class="d-flex justify-content-center align-items-center" href="#"><i class="bi bi-instagram"></i></a></li>
+            <li class="nav-item p-2"><a class="d-flex justify-content-center align-items-center" href="#"><i class="bi bi-twitter"></i></a></li>
+            <li class="nav-item p-2"><a class="d-flex justify-content-center align-items-center" href="#"><i class="bi bi-whatsapp"></i></a></li>
+          </ul>
+        </div>
+        <div class="footer-links d-flex align-items-center flex-column flex-md-row pt-5 text-center text-md-startr">
+          <ul class="sub-nav nav justify-content-center me-md-auto mb-3 mb-md-0">
+            <li class="nav-item"><a class="d-block p-2" href="#">Our Story</a></li>
+            <li class="nav-item"><a class="d-block p-2" href="#">Code of Conduct</a></li>
+            <li class="nav-item"><a class="d-block p-2" href="#">Privacy and Terms</a></li>
+            <li class="nav-item"><a class="d-block p-2" href="#">Contact</a></li>
+          </ul>
+          <div class="copyright me-md-4 mb-3 mb-md-0">
+            <p class="text mb-3">Copyright © 2022 Leadership Event Co., Ltd. <br> All Rights Reserved.</p>
+            <div class="design">Design: <a href="https://github.com/abdoshbr3322/" target="_blank">Abdullah</a></div>
+          </div>
+          <div class="scroll-top">
+            <button class="d-block d-flex justify-content-center align-items-center m-0"><i class="bi bi-arrow-up"></i></button>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/js/bootstrap.min.js" integrity="sha512-8Y8eGK92dzouwpROIppwr+0kPauu0qqtnzZZNEF8Pat5tuRNJxJXCkbQfJ0HlUG3y1HB3z18CSKmUo7i2zcPpg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/main.js"></script>

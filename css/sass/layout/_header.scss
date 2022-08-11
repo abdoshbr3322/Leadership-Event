@@ -1,6 +1,22 @@
 @use "../helpers/globals" as *;
 @use "../helpers/mixins" as *;
 @use "../helpers/placeholders" as *;
+.logo a {
+  @extend %main-color;
+  i {
+    font-size: 38px;
+    @include breakpoint("small-mobile") {
+      font-size: 25px;
+    }
+    margin-right: 5px;
+  }
+  h4 {
+    @include text-style(20px, bold, null, 1);
+    @include breakpoint("small-mobile") {
+      font-size: 16px;
+    }
+  }
+}
 
 header {
   @include position-style(fixed, 0, 0);
@@ -9,6 +25,7 @@ header {
   .nav-toggle {
     height: 30px;
     width: 40px;
+    background-color: transparent;
     @include breakpoint("small-mobile") {
       width: 30px;
     }
@@ -49,22 +66,7 @@ header {
       }
     }
   }
-  .logo a {
-    @extend %main-color;
-    i {
-      font-size: 38px;
-      @include breakpoint("small-mobile") {
-        font-size: 25px;
-      }
-      margin-right: 5px;
-    }
-    h4 {
-      @include text-style(20px, bold, null, 1);
-      @include breakpoint("small-mobile") {
-        font-size: 16px;
-      }
-    }
-  }
+
   ul.nav {
     &.mobile-nav {
       display: none;
@@ -74,7 +76,7 @@ header {
     li a {
       @include text-style(null, 500, #fff);
       transition: $main-transition;
-      &:hover {
+      &:hover ,&.active {
         @extend %main-color;
       }
     }
@@ -82,7 +84,6 @@ header {
   .buy {
     @include breakpoint("small-mobile") {
       font-size: 14px;
-      
     }
     a {
       @include text-style(null, bold, #fff);
